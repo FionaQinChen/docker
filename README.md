@@ -44,13 +44,21 @@ docker rm -v $(docker ps -aq -f status=exited)      #清除所有缓存的exit�
 ② docker start 将以后台方式启动容器。 docker run 命令实际上是 docker create 和 docker start 的组合。
 
 docker重启
+
 docker 会根据 --restart 的策略判断是否需要重启容器
+
 如果容器执行 docker stop 或docker kill 退出，则不会自动重启
 
 docker启动命令,docker重启命令,docker关闭命令
+
 启动        systemctl start docker
+
 守护进程重启   sudo systemctl daemon-reload
+
 重启docker服务   systemctl restart  docker
+
 重启docker服务  sudo service docker restart
-关闭docker   service docker stop   
+
+关闭docker   service docker stop
+
 关闭docker  systemctl stop docke
